@@ -3,12 +3,12 @@ import React from 'react';
 import Navbar from "../Components/Navbar";
 import PageWrapper from "../Components/PageWrapper";
 
-function About() {
+function Blog() {
     return (
         <PageWrapper>
-            <h1>Salut les bros</h1>
+            <h1>Welcome to my blog</h1>
         </PageWrapper>
     );
 }
 
-export default About;
+export default Blog;
