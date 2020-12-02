@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto Medium", serif;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background: aliceblue;
+}
+
+.intro {
+    background: url("../img/bg.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+}
+
+.content {
+    width: 100%;
+    height: 100vh;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+
+.logo {
+    margin-top: 100px;
+    border-radius: 50%;
+    width: 15%;
+    border: 3px solid aliceblue;
+}
+
+.infos {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.social {
+    margin-top: 100px;
+}
+
+.social img {
+    margin: 15px;
+    transition: all .2s;
+}
+
+.social img:hover {
+    transform: scale(1.5);
+}
+
+.nav a {
+    font-size: 2.2em;
+    color: aliceblue;
+    text-decoration: none;
+    margin: 70px;
+    text-shadow: 4px 4px 2px rgba(0,0,0,0.6);
+}
+
+.nav a:visited {
+    color: aliceblue;
+}
+
+.nav a:hover {
+    text-shadow: 4px 4px 2px rgba(0,0,0,1);
+}
+
+.blog-intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    height: 30vh;
+    width: 100%;
+    background: url("../img/bg.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.container {
+    width: 60vw;
+    margin: 60px auto 0;
+}
+
+.article-preview {
+    display: flex;
+    align-items: center;
+    margin: 40px 0px;
+}
+
+.article-preview-info {
+    margin: 0px 30px;
+    width: 80%;
+}
+
+.description {
+    margin-top: 15px;
+}
+
+.date {
+    margin-top: 15px;
+    font-size: 0.8em;
+}
+
+.title:visited {
+    color: dodgerblue;
+}
+
+.article-preview img {
+    width: 20%;
+}
+
+.article-intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    height: 60vh;
+    width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.article-title {
+    font-size: 2.2em;
+    color: aliceblue;
+    text-decoration: none;
+    text-shadow: 4px 4px 2px rgba(0,0,0,0.6);
+}
+
+.article-content {
+    text-align: justify;
+    line-height: 1.5em;
+}
