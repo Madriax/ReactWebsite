@@ -144,3 +144,50 @@ body {
     text-align: justify;
     line-height: 1.5em;
 }
+
+.contact-form {
+    margin-top: 30px;
+}
+
+.contact-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    transition: all .3s;
+    outline: 0;
+    border-width: 0 0 2px;
+}
+
+.contact-form input:placeholder-shown {
+    border-color: white;
+}
+
+.contact-form input:focus {
+    border-color: #005eff;
+}
+
+.contact-form input:not(:focus):not(:invalid):not(:placeholder-shown) {
+    border-color: #01bc01;
+}
+
+.contact-form input:not(:placeholder-shown):not(:focus):invalid {
+    border-color: red;
+}
+
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+.contact-form {
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+}
+
+.contact-form button {
+    width: 50%;
+    margin-top: 10px;
+    padding: 10px;
+}

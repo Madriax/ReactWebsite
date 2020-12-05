@@ -31,15 +31,17 @@ function Contact() {
 
     return (
         <PageWrapper>
-            <h1>El pagos del contactos</h1>
-
-            <input type="text" placeholder="First name" onChange={(e) => setFirstName(e.target.value)} />
-            <input type="text" placeholder="Last name" onChange={(e) => setLastName(e.target.value)} />
-            <input type="text" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
-            <input type="text" placeholder="Subject" onChange={(e) => setSubject(e.target.value)} />
-            <textarea onChange={(e) => setMessage(e.target.value)} />
-            <button onClick={sendMessage}>Send</button>
-
+            <div className="container">
+                <h1>Contact me !</h1>
+                <form action="" className="contact-form" onSubmit={sendMessage}>
+                    <input type="text" placeholder="First name" onChange={(e) => setFirstName(e.target.value)} />
+                    <input type="text" placeholder="Last name" onChange={(e) => setLastName(e.target.value)} />
+                    <input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
+                    <input type="text" placeholder="Subject" onChange={(e) => setSubject(e.target.value)} />
+                    <textarea rows={10} onChange={(e) => setMessage(e.target.value)} />
+                    <button type="submit">Send</button>
+                </form>
+            </div>
         </PageWrapper>
     );
 }
