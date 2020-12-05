@@ -12,8 +12,9 @@ function Contact() {
     /**
      * Post message
      */
-    function sendMessage() {
-        fetch(window.location.protocol + window.location.hostname + ":8080/contact", {
+    function sendMessage(e: React.FormEvent) {
+        e.preventDefault();
+        fetch(window.location.protocol + "//" + window.location.hostname + ":8080/mail", {
             method: "POST",
             headers: new Headers({
                 "Content-Type": "application/json"
@@ -33,7 +34,7 @@ function Contact() {
         <PageWrapper>
             <div className="container">
                 <h1>Contact me !</h1>
-                <form action="" className="contact-form" onSubmit={sendMessage}>
+                <form className="contact-form" onSubmit={sendMessage}>
                     <input type="text" placeholder="First name" onChange={(e) => setFirstName(e.target.value)} />
                     <input type="text" placeholder="Last name" onChange={(e) => setLastName(e.target.value)} />
                     <input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
