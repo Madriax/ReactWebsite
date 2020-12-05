@@ -9,22 +9,16 @@ body {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    background: aliceblue;
-}
-
-.intro {
     background: url("../img/bg.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    height: 100vh;
-    width: 100vw;
 }
 
 .content {
     width: 100%;
-    height: 100vh;
+    height: 70vh;
     color: aliceblue;
     display: flex;
     justify-content: center;
@@ -32,8 +26,14 @@ body {
     flex-flow: column;
 }
 
+main {
+    width: 100vw;
+    min-height: 70vh;
+    background-color: aliceblue;
+}
+
 .logo {
-    margin-top: 100px;
+    margin-top: -50px;
     border-radius: 50%;
     width: 15%;
     border: 3px solid aliceblue;
@@ -80,16 +80,12 @@ body {
     flex-flow: column;
     height: 30vh;
     width: 100%;
-    background: url("../img/bg.jpg") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
 }
 
 .container {
     width: 60vw;
-    margin: 60px auto 0;
+    margin: auto;
+    padding-top: 60px;
 }
 
 .article-preview {
@@ -164,6 +160,11 @@ body {
 
 .contact-form input:focus {
     border-color: #005eff;
+    -moz-box-shadow: 2px 2px 10px 0px #656565;
+    -webkit-box-shadow: 2px 2px 10px 0px #656565;
+    -o-box-shadow: 2px 2px 10px 0px #656565;
+    box-shadow: 2px 2px 10px 0px #656565;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=10);
 }
 
 .contact-form input:not(:focus):not(:invalid):not(:placeholder-shown) {
@@ -174,10 +175,30 @@ body {
     border-color: red;
 }
 
+.contact-form textarea:placeholder-shown {
+    border-color: white;
+}
+
 .contact-form textarea {
     width: 100%;
     padding: 10px;
-    margin-top: 30px;
+    margin: 10px 0;
+    transition: all .3s;
+    outline: 0;
+    border-width: 0 0 2px;
+}
+
+.contact-form textarea:focus {
+    border-color: #005eff;
+    -moz-box-shadow: 2px 2px 10px 0px #656565;
+    -webkit-box-shadow: 2px 2px 10px 0px #656565;
+    -o-box-shadow: 2px 2px 10px 0px #656565;
+    box-shadow: 2px 2px 10px 0px #656565;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=10);
+}
+
+.contact-form textarea:not(:focus):not(:invalid):not(:placeholder-shown) {
+    border-color: #01bc01;
 }
 
 .contact-form {
@@ -190,4 +211,13 @@ body {
     width: 50%;
     margin-top: 10px;
     padding: 10px;
+    transition: all .2s;
+    border: 1px solid #a7a7a7;
+    box-sizing: border-box;
+}
+
+.contact-form button:hover {
+    background-color: #005eff;
+    color: white;
+    border: 1px solid #005eff;
 }

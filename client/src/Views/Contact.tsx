@@ -38,7 +38,7 @@ function Contact() {
                     <input type="text" placeholder="Last name" onChange={(e) => setLastName(e.target.value)} />
                     <input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
                     <input type="text" placeholder="Subject" onChange={(e) => setSubject(e.target.value)} />
-                    <textarea rows={10} onChange={(e) => setMessage(e.target.value)} />
+                    <textarea rows={10} placeholder="Your message here..." onChange={(e) => setMessage(e.target.value)} />
                     <button type="submit">Send</button>
                 </form>
             </div>

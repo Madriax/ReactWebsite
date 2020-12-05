@@ -9,7 +9,8 @@ function PageWrapper({children}: Props) {
                 <Navbar />
             </div>
 
-            {children}
+            <main>{children}</main>
+
         </>
     )
 }

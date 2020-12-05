@@ -9,11 +9,11 @@ import Navbar from "../Components/Navbar";
 
 function Home() {
     return (
-        <div className="intro">
-            <div className="content">
-
+        <>
+            <div className="blog-intro">
                 <Navbar />
-
+            </div>
+            <div className="content">
                 <img src={profile} alt="Alexandre Duvois" className="logo" />
 
                     <div className="infos">
@@ -39,7 +39,7 @@ function Home() {
                         </a>
                     </div>
             </div>
-        </div>
+        </>
     );
 }
 
