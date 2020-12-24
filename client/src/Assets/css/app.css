@@ -214,12 +214,12 @@ nav {
 }
 /* ===== -ABOUT- ===== */
 
-/* ===== +ARTICLE LIST+ ===== */
-.article-list {
+/* ===== +PROJECT LIST+ ===== */
+.project-list {
     padding-top: 75px;
 }
 
-.article-list .content {
+.project-list .content {
     min-height: calc(100vh - 150px);
     display: flex;
     width: 55%;
@@ -228,21 +228,21 @@ nav {
     flex-wrap: wrap;
 }
 
-.article-list h1 {
+.project-list h1 {
     color: #4150ec;
     margin-bottom: 30px;
 }
 
-.article-list h2 {
+.project-list h2 {
     font-size: 2.8em;
 }
 
-.article-list .read-more {
+.project-list .read-more {
     display: flex;
     width: 100%;
 }
 
-.article-list .read-more button {
+.project-list .read-more button {
     width: 140px;
     height: 45px;
     background-color: #4150ec;
@@ -257,44 +257,48 @@ nav {
     transition: all .2s;
 }
 
-.article-list .read-more button:hover {
+.project-list .read-more button:hover {
     background-color: #2e0a82;
     color: white;
 }
 
-.article-list .articles {
+.project-list .projects {
     display: flex;
     margin: auto;
     align-items: stretch;
 }
-/* ===== -ARTICLE LIST- ===== */
+/* ===== -PROJECT LIST- ===== */
 
-/* ===== +ARTICLE+ =====*/
-.article {
+/* ===== +PROJECT+ =====*/
+.project {
     display: flex;
     flex-wrap: wrap;
     border-radius: 5%;
     transition: all .2s;
 }
 
-.article:hover {
+.project:hover {
     box-shadow: 0 0 2em #5d5d5d;
 }
 
-.article:not(:nth-child(1)) {
+.project:not(:nth-child(1)) {
     margin-left: 20px;
 }
 
-.article h1 {
+.project h1 {
     margin-top: 10px;
     font-size: 1.4em;
 }
 
-.article img {
+.project p {
+    text-align: justify;
+}
+
+.project img {
     border-radius: 5%;
 }
 
-.article .infos {
+.project .infos {
     padding: 10px;
 }
-/* ===== -ARTICLE- =====*/
+/* ===== -PROJECT- =====*/
