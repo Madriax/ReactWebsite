@@ -1,8 +1,8 @@
 import React from 'react';
 import Home from "./Views/Home";
-import About from "./Views/About";
+/**import About from "./Views/About";
 import Contact from "./Views/Contact";
-import Blog from "./Views/Blog";
+import Blog from "./Views/Blog";*/
 
 interface IRoute {
     name: string,
@@ -17,7 +17,7 @@ const routes: IRoute[] = [
         path: '/',
         component: <Home />,
         exact: true
-    },
+    }/**,
     {
         name: 'About',
         path: '/about',
@@ -35,7 +35,7 @@ const routes: IRoute[] = [
         path: '/contact',
         component: <Contact />,
         exact: true
-    }
+    }*/
 ];
 
 export default routes;

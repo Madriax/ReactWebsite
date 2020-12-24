@@ -1,5 +1,6 @@
 import React from "react";
 import routes from "../routes";
+import logo from "../Assets/icons/logo.png"
 import {
     Link
 } from "react-router-dom";
@@ -16,12 +17,22 @@ function Navbar() {
     }
 
     return (
-        <div className="nav">
-            <Link to={getPathByName('Home')} >Home</Link>
-            <Link to={getPathByName('About')} >About</Link>
-            <Link to={getPathByName('Blog')} >Blog</Link>
-            <Link to={getPathByName('Contact')} >Contact</Link>
-        </div>
+        <header>
+            <nav className="navbar">
+                <a href="#" className="logo">
+                    <img src={logo} alt="Logo" />
+                </a>
+                <ul className="nav-links">
+                    <li className="nav-item"><a href="#">Home</a></li>
+                    <li className="nav-item"><a href="#">About</a></li>
+                    <li className="nav-item"><a href="#">Services</a></li>
+                    <li className="nav-item"><a href="#">Portfolio</a></li>
+                    <li className="nav-item"><a href="#">Blog</a></li>
+                    <li className="nav-item"><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
     );
 }
 
