@@ -8,6 +8,7 @@ import youtube from '../Assets/icons/youtube.svg';
 import Navbar from "../Components/Navbar";
 import Hero from '../Components/Hero';
 import About from "../Components/About";
+import ArticleList from "../Components/ArticleList";
 
 function Home() {
     return (
@@ -15,6 +16,7 @@ function Home() {
             <Navbar />
             <Hero />
             <About />
+            <ArticleList />
         </>
     );
 }
