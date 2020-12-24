@@ -112,6 +112,11 @@ nav {
     margin-top: 40px;
     font-size: 0.9em;
     cursor: pointer;
+    transition: background-color .2s;
+}
+
+.hero button:hover {
+    background-color: #2e0a82;
 }
 /* ===== -HERO- ===== */
 
@@ -173,10 +178,17 @@ nav {
     margin-top: 40px;
     font-size: 0.9em;
     cursor: pointer;
+    transition: all .2s;
+}
+
+.about .read-more button:hover {
+    background-color: #4150ec;
+    color: white;
 }
 
 .about .location {
     display: flex;
+    margin: auto;
     line-height: 3.5em;
 }
 
