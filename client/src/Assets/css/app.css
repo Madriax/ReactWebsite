@@ -61,8 +61,12 @@ nav {
 
 /* ===== +HERO+ ===== */
 .hero {
-    min-height: calc(100vh - 75px);
     padding-top: 75px;
+    background-color: aliceblue;
+}
+
+.hero .content {
+    min-height: calc(100vh - 75px);
     display: flex;
     width: 55%;
     margin: auto;
@@ -88,7 +92,7 @@ nav {
 }
 
 .hero .info {
-    display: inline-block;
+    display: block;
 }
 
 .hero img {
@@ -113,7 +117,81 @@ nav {
 
 /* ===== +ABOUT+ ===== */
 .about {
-    min-height: calc(100vh - 75px);
     background-color: #170442;
+    padding-top: 75px;
+}
+
+.about .content {
+    min-height: calc(100vh - 150px);
+    display: flex;
+    width: 55%;
+    margin: auto;
+    color: white;
+    flex-wrap: wrap;
+}
+
+.about h1 {
+    color: #4150ec;
+    margin-bottom: 30px;
+}
+
+.about h2 {
+    font-size: 2.8em;
+}
+
+.about .infos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about .infos .text {
+    display: block;
+    text-align: justify;
+}
+
+.about .infos img {
+    margin-left: 50px;
+    max-width: 400px;
+    border-radius: 10%;
+}
+
+.about .read-more {
+    display: flex;
+    width: 100%;
+}
+
+.about .read-more button {
+    width: 140px;
+    height: 45px;
+    background-color: aliceblue;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #3a0ca3;
+    border-radius: 100px;
+    border: none;
+    margin-top: 40px;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+
+.about .location {
+    display: flex;
+    line-height: 3.5em;
+}
+
+.about .location h3 {
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+.about .location h3:nth-last-child(1) {
+    margin-left: 100px;
+}
+
+.about h3 .title {
+    color: #4150ec;
+    text-transform: none;
+    font-size: 1.2em;
 }
 /* ===== -ABOUT- ===== */
