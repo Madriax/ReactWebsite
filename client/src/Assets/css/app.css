@@ -61,7 +61,7 @@ nav {
 
 /* ===== +HERO+ ===== */
 .hero {
-    min-height: 80vh;
+    min-height: calc(100vh - 75px);
     padding-top: 75px;
     display: flex;
     width: 55%;
@@ -107,12 +107,13 @@ nav {
     border: none;
     margin-top: 40px;
     font-size: 0.9em;
+    cursor: pointer;
 }
 /* ===== -HERO- ===== */
 
 /* ===== +ABOUT+ ===== */
 .about {
-    min-height: 80vh;
+    min-height: calc(100vh - 75px);
     background-color: #170442;
 }
 /* ===== -ABOUT- ===== */
