@@ -1,5 +1,5 @@
 import React from "react";
-import setup from "../Assets/img/setup.jpg";
+import setup from "../../Assets/img/setup.jpg";
 
 function About() {
 

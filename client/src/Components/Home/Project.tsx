@@ -1,5 +1,5 @@
 import React from "react";
-import {ProjectProps} from "../Types/ProjectProps";
+import {ProjectProps} from "../../Types/ProjectProps";
 
 function Project(props: ProjectProps) {
 

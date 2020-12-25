@@ -1,7 +1,7 @@
 import React from 'react';
 import Home from "./Views/Home";
-/**import About from "./Views/About";
-import Contact from "./Views/Contact";
+import About from "./Views/About";
+/**import Contact from "./Views/Contact";
 import Blog from "./Views/Blog";*/
 
 interface IRoute {
@@ -17,13 +17,13 @@ const routes: IRoute[] = [
         path: '/',
         component: <Home />,
         exact: true
-    }/**,
+    },
     {
         name: 'About',
         path: '/about',
         component: <About />,
         exact: true
-    },
+    }/**,
     {
         name: 'Blog',
         path: '/blog',

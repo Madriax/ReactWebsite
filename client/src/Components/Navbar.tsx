@@ -23,8 +23,8 @@ function Navbar() {
                     <img src={logo} alt="Logo" />
                 </a>
                 <ul className="nav-links">
-                    <li className="nav-item"><a href="#">Home</a></li>
-                    <li className="nav-item"><a href="#">About</a></li>
+                    <li className="nav-item"><Link to={getPathByName('Home')}>Home</Link></li>
+                    <li className="nav-item"><Link to={getPathByName('About')}>About</Link></li>
                     <li className="nav-item"><a href="#">Services</a></li>
                     <li className="nav-item"><a href="#">Portfolio</a></li>
                     <li className="nav-item"><a href="#">Blog</a></li>

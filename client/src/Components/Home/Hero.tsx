@@ -1,5 +1,5 @@
 import React from "react";
-import profile from "../Assets/img/alex.jpg"
+import profile from "../../Assets/img/alex.jpg"
 
 function Hero() {
 
