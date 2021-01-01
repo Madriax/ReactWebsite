@@ -1,3 +1,6 @@
 import {app} from './index';
+import {createConnection} from "typeorm";
 
-app.listen(8080);
+createConnection().then(() => {
+    app.listen(8080);
+});

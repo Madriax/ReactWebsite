@@ -4,7 +4,7 @@
   "main": "dist/server.js",
   "license": "UNLICENSED",
   "scripts": {
-    "start:dev": "nodemon",
+    "start:dev": "cross-env TYPEORM_ENTITIES=src/Entity/*.ts nodemon",
     "start:prod": "npx pm2 start . --name react-website",
     "stop:prod": "npx pm2 stop react-website",
     "build": "tsc"
@@ -12,18 +12,24 @@
   "dependencies": {
     "@koa/cors": "^3.1.0",
     "dotenv": "^8.2.0",
+    "joiful": "^2.0.1",
     "koa": "^2.13.0",
     "koa-bodyparser": "^4.3.0",
     "koa-router": "^10.0.0",
+    "mysql2": "^2.2.5",
     "nodemailer": "^6.4.16",
-    "nodemailer-mailgun-transport": "^2.0.2"
+    "nodemailer-mailgun-transport": "^2.0.2",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.2.29"
   },
   "devDependencies": {
     "@types/koa": "^2.11.6",
     "@types/koa-bodyparser": "^4.3.0",
     "@types/koa-router": "^7.4.1",
+    "@types/node": "^14.14.19",
     "@types/nodemailer": "^6.4.0",
     "@types/nodemailer-mailgun-transport": "^1.4.2",
+    "cross-env": "^7.0.3",
     "nodemon": "^2.0.6",
     "ts-node": "^9.0.0",
     "typescript": "^4.1.2"

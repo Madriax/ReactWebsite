@@ -8,7 +8,7 @@ export function KoaLogger() {
         } catch (e) {
             console.log(`Error: ${e.message}`);
             ctx.body = { error: e.message }
-            ctx.status = 500;
+            ctx.status = e.status || 500;
         }
     }
 }
