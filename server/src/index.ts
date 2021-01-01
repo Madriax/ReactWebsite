@@ -1,3 +1,4 @@
+import "./Provider/SentryProvider";
 import "reflect-metadata";
 import * as Koa from 'koa';
 import MainController from './Controller/MainController';
