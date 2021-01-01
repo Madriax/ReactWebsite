@@ -10,7 +10,7 @@ router.get('/', async (ctx, next) => {
    await next();
 });
 
-router.use('/blog', IsUser(), BlogController.routes(), BlogController.allowedMethods());
+router.use('/blog', BlogController.routes(), BlogController.allowedMethods());
 
 router.use('/mail', MailController.routes(), MailController.allowedMethods());
 
