@@ -3,6 +3,7 @@ import * as jf from 'joiful';
 import {CustomError} from "../utils/CustomError";
 import {getConnection} from "typeorm";
 import {Article} from "../Entity/Article";
+import Logger from "../utils/Logger";
 
 /**
  * Create an article
@@ -15,7 +16,7 @@ export async function createArticle(article: ArticleValidation) {
     const connection = getConnection();
     const articleRepository = connection.getRepository(Article)
     const savedArticle = await articleRepository.save(article);
-    console.log(`New article created with id ${savedArticle.id}`);
+    Logger.info(`New article created with id ${savedArticle.id}`)
     return { message: `New article created with id ${savedArticle.id}` };
 }
 

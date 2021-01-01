@@ -4,7 +4,7 @@
   "main": "dist/server.js",
   "license": "UNLICENSED",
   "scripts": {
-    "start:dev": "cross-env TYPEORM_ENTITIES=src/Entity/*.ts nodemon",
+    "start:dev": "cross-env TYPEORM_ENTITIES=src/Entity/*.ts NODE_ENV=development nodemon",
     "start:prod": "npx pm2 start . --name react-website",
     "stop:prod": "npx pm2 stop react-website",
     "build": "tsc"
@@ -20,7 +20,8 @@
     "nodemailer": "^6.4.16",
     "nodemailer-mailgun-transport": "^2.0.2",
     "reflect-metadata": "^0.1.13",
-    "typeorm": "^0.2.29"
+    "typeorm": "^0.2.29",
+    "winston": "^3.3.3"
   },
   "devDependencies": {
     "@types/koa": "^2.11.6",

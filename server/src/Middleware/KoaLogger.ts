@@ -1,12 +1,13 @@
 import {Context, Next} from "koa";
+import Logger from "../utils/Logger";
 
 export function KoaLogger() {
     return async (ctx: Context, next: Next) => {
-        console.log(`${ctx.request.ip} ${ctx.request.method} => ${ctx.request.originalUrl}`);
+        Logger.info('request', { ip: ctx.request.ip, method: ctx.request.method, url: ctx.request.originalUrl })
         try {
             await next();
         } catch (e) {
-            console.log(`Error: ${e.message}`);
+            Logger.error(e.message)
             ctx.body = { error: e.message }
             ctx.status = e.status || 500;
         }
