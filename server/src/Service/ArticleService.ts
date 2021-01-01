@@ -8,7 +8,7 @@ import {Article} from "../Entity/Article";
  * Create an article
  * @param article
  */
-async function createArticle(article: ArticleValidation) {
+export async function createArticle(article: ArticleValidation) {
     const { error } = jf.validateAsClass(article, ArticleValidation);
     if (error) throw new CustomError(error.message, 400);
 
@@ -19,21 +19,23 @@ async function createArticle(article: ArticleValidation) {
     return { message: `New article created with id ${savedArticle.id}` };
 }
 
-async function getArticles() {
-    return [
-        {
-            id: 1,
-            name: 'El firstos articlos',
-            description: 'TOtoTOto TOtoTOto TOtoTOto',
-            content: 'Les amis toto Les amis toto Les amis toto Les amis toto Les amis toto Les amis toto Les amis toto Les amis toto Les amis toto Les amis toto'
-        },
-        {
-            id: 2,
-            name: 'El deuxiemos articlos del patatos',
-            description: 'Tetetet Tetetet Tetetet Tetetet',
-            content: 'El amigos hehe El amigos hehe El amigos hehe El amigos hehe El amigos hehe El amigos hehe El amigos hehe El amigos hehe El amigos hehe'
-        }
-    ];
+/**
+ * Return all articles
+ */
+export async function getArticles() {
+    const connection = getConnection();
+    const articleRepository = connection.getRepository(Article)
+    const articles = await articleRepository.find();
+    return { articles }
 }
 
-export {createArticle, getArticles}
+/**
+ * Return an article based on his id
+ * @param id
+ */
+export async function getArticle(id: number) {
+    const connection = getConnection();
+    const articleRepository = connection.getRepository(Article)
+    const articles = await articleRepository.findOneOrFail(id);
+    return { articles }
+}
