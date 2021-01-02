@@ -14,9 +14,9 @@ export async function createArticle(article: ArticleValidation) {
     if (error) throw new CustomError(error.message, 400);
 
     const connection = getConnection();
-    const articleRepository = connection.getRepository(Article)
+    const articleRepository = connection.getRepository(Article);
     const savedArticle = await articleRepository.save(article);
-    Logger.info(`New article created with id ${savedArticle.id}`)
+    Logger.info(`New article created with id ${savedArticle.id}`);
     return { message: `New article created with id ${savedArticle.id}` };
 }
 
@@ -25,9 +25,9 @@ export async function createArticle(article: ArticleValidation) {
  */
 export async function getArticles() {
     const connection = getConnection();
-    const articleRepository = connection.getRepository(Article)
+    const articleRepository = connection.getRepository(Article);
     const articles = await articleRepository.find();
-    return { articles }
+    return { articles };
 }
 
 /**
@@ -36,7 +36,7 @@ export async function getArticles() {
  */
 export async function getArticle(id: number) {
     const connection = getConnection();
-    const articleRepository = connection.getRepository(Article)
+    const articleRepository = connection.getRepository(Article);
     const articles = await articleRepository.findOneOrFail(id);
-    return { articles }
+    return { articles };
 }
