@@ -13,7 +13,7 @@ router.get('/:id', async (ctx, next) => {
     await next();
 });
 
-router.post('/create', async (ctx, next) => {
+router.post('/', async (ctx, next) => {
     ctx.body = await createArticle(ctx.request.body);
     await next();
 })
