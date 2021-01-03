@@ -1,5 +1,5 @@
 import * as Router from 'koa-router';
-import {getArticles, createArticle, getArticle} from "../Service/ArticleService";
+import {getArticles, createArticle, getArticle, updateArticle} from "../Service/ArticleService";
 
 const router = new Router();
 
@@ -10,6 +10,11 @@ router.get('/', async (ctx, next) => {
 
 router.get('/:id', async (ctx, next) => {
     ctx.body = await getArticle(ctx.params.id);
+    await next();
+});
+
+router.put('/:id', async (ctx, next) => {
+    ctx.body = await updateArticle(ctx.params.id, ctx.request.body);
     await next();
 });
 

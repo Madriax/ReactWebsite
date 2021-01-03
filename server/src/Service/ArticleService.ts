@@ -21,6 +21,22 @@ export async function createArticle(article: ArticleValidation) {
 }
 
 /**
+ * Update an article
+ * @param id
+ * @param article
+ */
+export async function updateArticle(id: number, article: ArticleValidation) {
+    const { error } = jf.validateAsClass(article, ArticleValidation);
+    if (error) throw new CustomError(error.message, 400);
+
+    const connection = getConnection();
+    const articleRepository = connection.getRepository(Article);
+    await articleRepository.update(id, article);
+    Logger.info(`Article ${id} was updated`);
+    return { message: `Article ${id} was updated` };
+}
+
+/**
  * Return all articles
  */
 export async function getArticles() {
